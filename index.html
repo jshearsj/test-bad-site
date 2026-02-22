@@ -38,9 +38,9 @@
         footer a { color: #9ca3af; text-decoration: none; margin: 0 12px; }
     </style>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FAKEID123"></script>
-    <script>
+    <!-- Google Analytics — tagged for ClearConsent banner -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FAKEID123" data-cc-category="analytics"></script>
+    <script data-cc-category="analytics">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -48,14 +48,14 @@
     </script>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script data-cc-category="analytics">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-FAKE123');</script>
 
     <!-- Facebook Pixel -->
-    <script>
+    <script data-cc-category="advertising">
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
         n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -66,7 +66,7 @@
     </script>
 
     <!-- TikTok Pixel -->
-    <script>
+    <script data-cc-category="advertising">
         !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
         ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
         ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
@@ -81,7 +81,7 @@
     </script>
 
     <!-- Hotjar -->
-    <script>
+    <script data-cc-category="analytics">
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:0000000,hjsv:6};
@@ -93,16 +93,16 @@
     </script>
 
     <!-- Google Ads Conversion -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-FAKE123"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-FAKE123" data-cc-category="advertising"></script>
+    <script data-cc-category="advertising">
         gtag('config', 'AW-FAKE123');
     </script>
 
     <!-- DoubleClick -->
-    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async></script>
+    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async data-cc-category="advertising"></script>
 
     <!-- Microsoft Clarity -->
-    <script type="text/javascript">
+    <script type="text/javascript" data-cc-category="analytics">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -116,6 +116,7 @@
         <nav>
             <a href="#">Shop</a>
             <a href="#">Deals</a>
+            <a href="https://clearconsent.app/policy/hosted/5af8e039836a">Privacy Policy</a>
             <a href="#">Contact</a>
         </nav>
     </header>
@@ -186,10 +187,15 @@
     <footer>
         <p>&copy; 2024 QuickBuy. All rights reserved.</p>
         <p style="margin-top: 8px;">
+            <a href="https://clearconsent.app/policy/hosted/5af8e039836a">Privacy Policy</a>
+            <a href="#" class="do-not-sell">Do Not Sell My Personal Information</a>
             <a href="#">Terms of Service</a>
             <a href="#">Returns</a>
             <a href="#">Help</a>
         </p>
     </footer>
+
+    <!-- ClearConsent Cookie Banner -->
+    <script src="https://clearconsent.app/banner/1/2.js" defer></script>
 </body>
 </html>
